@@ -16,9 +16,4 @@ def product_list(request):
         date_found = today
         count += 1
         today = today - timedelta(1)
-
-    # date = datetime.now()
-    # base_url = f'http://joca.pythonanywhere.com/promocao/{date.day}/{date.month}/{date.year}/produto/'
-    # r = requests.get(f'{base_url}')
-    # products = r.json()
     return render(request, 'supermarket/index.html',{'products':products, 'date_found': date_found})
